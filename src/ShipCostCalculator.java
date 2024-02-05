@@ -13,12 +13,15 @@ public class ShipCostCalculator
         //calculate shipping and give appropriate output
         if (itemPrice >= 100) {
             shippingCost = 0;
-            System.out.println(" Your shipping is: $" + shippingCost + "Your total cost is: $" + itemPrice);
+            System.out.println(" Your shipping is: $ " + shippingCost);
+            totalCost = itemPrice + shippingCost;
+            System.out.print("Your total cost is: $" + totalCost);
         } else {
             shippingCost = 0.02 * itemPrice;
             totalCost = itemPrice + shippingCost;
             // output results for charged shipping
-            System.out.println(" Your shipping is: " + shippingCost + "Your total cost is: $" + totalCost);
+            System.out.println(" Your shipping is: $" + shippingCost);
+            System.out.print("Your total cost is: $" + totalCost);
         }
     }
 }
